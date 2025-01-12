@@ -7,7 +7,12 @@ import crypto from 'crypto';
 
 const app = express();
 const server = http.createServer(app);
-const io = new Server(server);
+const io = new Server(server, {
+    cors: {
+        origin: "*", // Lub adres klienta
+        methods: ["GET", "POST"]
+    }
+});
 
 // Middleware
 app.use(express.json());
