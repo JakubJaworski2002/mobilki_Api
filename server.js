@@ -39,9 +39,11 @@ io.on('connection', (socket) => {
                 host: hostName,
             });
             socket.join(code);
+            console.log("createLobby:succes")
             socket.emit('lobbyCreated', { success: true, code });
             //callback({ success: true, code });
         } catch (err) {
+            console.log("createLobby:error")
             console.error(err);
             //callback({ success: false, error: 'Nie udało się utworzyć lobby.' });
         }
