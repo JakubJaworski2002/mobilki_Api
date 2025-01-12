@@ -1,7 +1,7 @@
 import { Sequelize } from 'sequelize';
 
-const sequelize = new Sequelize('1zN', 'Michalek', 'iMdjVwUTRckXLgxyNlcsHXdsBcEWnfXk', {
-    host: 'mysql-production-d596.up.railway.app',
+const sequelize = new Sequelize('railway', 'root', 'lCLSNXycysppWuQpQCWhmcSoyUTvFxwI', {
+    host: 'mysql.railway.internal',
     dialect: 'mysql', 
     dialectOptions: {
         charset: 'utf8mb4', // Ustawienie poprawnego kodowania
